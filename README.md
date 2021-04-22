@@ -16,24 +16,22 @@ converteste in cifra(prin scaderea cu 48 conform codului ASCII) dupa care formea
 in eax rezultatul. Daca numarul e negativ, se retine in variabila ```semn``` acest 
 lucru si se ignora la calcul primul caracter(care este '-'). La sfarsit se trece
 rezultatul la negativ.
-
+<br>
 Functia ```calcul_expresie``` este o functie recursiva care porneste de la nodul
 curent si merge pe fii din stanga si din dreapta pana ajunge la frunze.
 
-Labelul ```stanga``` se apeleaza daca exista fiu in stanga, punandu-se pe stiva 
+- Labelul ```stanga``` se apeleaza daca exista fiu in stanga, punandu-se pe stiva 
 valoarea convertita ce se afla in nodul din stanga. Tot aici se apeleaza si labelul 
 ```dreapta``` care procedeaza la fel, doar ca pentru subarborele drept. Ambele 
 contin apelarea recursiva a functiei ```calcul_expresie``` pentru a parcurge tot
 arborele. Parcurgerea se face Radacina-Stanga-Dreapta.
 
-Labelul ```conversie_sir``` converteste sirul afla la nodul curent in numar intreg.
+- Labelul ```conversie_sir``` converteste sirul afla la nodul curent in numar intreg.
 
-Labelul ```expresie``` testeaza ce fel de operatie trebuie efectuata prin evaluarea
+- Labelul ```expresie``` testeaza ce fel de operatie trebuie efectuata prin evaluarea
 continutului nodului parinte pentru nivelul curent. Apoi se apeleaza operatia
 corespunzatoare: adunare, scadere, inmultire sau impartire. Acestea scot din stiva
 valoarea din stanga si din dreapta si efectueaza calculul.
 
 Dupa ce se termina functia de calcul al expresiei, se afiseaza rezultatul stocat 
-in eax.
-
-Eliberarea memoriei este realizata de functia ```freeAST()```.
+in eax. Eliberarea memoriei este realizata de functia ```freeAST()```.
